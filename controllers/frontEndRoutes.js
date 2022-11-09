@@ -18,8 +18,15 @@ router.get("/blog/:id", (req, res) => {
   }).then((blog) => {
     // res.json(blogs)
     const blogHbsData = blog.get({ plain: true });
+    console.log(blog)
+    console.log("===========================")
+    console.log(blogHbsData)
     res.render("single-blog", blogHbsData);
   });
 });
+
+router.get("/login", (req, res) => {
+    res.render("login")
+})
 
 module.exports = router;
