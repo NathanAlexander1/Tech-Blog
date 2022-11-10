@@ -2,11 +2,20 @@
 
 
 <h2>My posts:</h2>
-
-{{#each blogs}}
+{{#each Blogs}}
     <div class = "card">
         <a href="/blog/{{id}}"><h3>{{title}}</h3></a>
         <p>{{blog_content}}</p>
+        {{!-- {{#each Comments}} --}}
         <hr>
     </div>
 {{/each}}
+
+<h2>Add a blog post!</h2>
+<form action="" class="addBlog">
+    <input type="text" name="title" class="blogTitle" placeholder="Blog Title">
+    <input type="text" name="blog_content" class="blog_content" placeholder="Blog Content">
+    <button>Add Blog!</button>
+</form>
+
+<script src="/js/profile.js"></script>

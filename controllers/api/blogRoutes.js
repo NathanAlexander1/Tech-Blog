@@ -1,5 +1,17 @@
 const router = require('express').Router();
-const { Blog } = require('../../models');
+const { Blog, Comment } = require('../../models');
+
+router.get('/:id', (req, res)=>{
+  Blog.findByPk(req.params.id, {
+    include:Comment
+  })
+  .then((blog)=>{
+      res.json(blog)
+  }).catch ((err) => {
+      console.log(err);
+      res.status(500).json({err:err})
+    })
+})
 
 router.post('/', async (req, res) => {
     if(!req.session.logged_in){

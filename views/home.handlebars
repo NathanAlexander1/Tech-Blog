@@ -3,8 +3,14 @@
 <h2>All Blogs</h2>
 {{#each blogs}}
     <div class = "card">
+        <h1>{{User.name}}</h1>
+        <h3>{{createdAt}}</h3>
         <a href="/blog/{{id}}"><h3>{{title}}</h3></a>
+
+        <h2>Blog:</h2>
         <p>{{blog_content}}</p>
+        <h3>Comments:</h3>
+        <p>{{Comment.comment_content}}</p>
         <hr>
     </div>
 {{/each}}
