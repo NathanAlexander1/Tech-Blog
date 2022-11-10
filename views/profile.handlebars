@@ -1,0 +1,12 @@
+<h1>This is my profile Welcome back, {{name}}</h1>
+
+
+<h2>My posts:</h2>
+
+{{#each blogs}}
+    <div class = "card">
+        <a href="/blog/{{id}}"><h3>{{title}}</h3></a>
+        <p>{{blog_content}}</p>
+        <hr>
+    </div>
+{{/each}}

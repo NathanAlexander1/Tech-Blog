@@ -24,30 +24,39 @@ const blogData = [
     title: "Thoughts on earth",
     blog_content:
       "I think the earth is flatI think the earth is flatI think the earth is flatI think the earth is flatI think the earth is flatI think the earth is flatI think the earth is flatI think the earth is flat",
+      user_id: 3
   },
   {
     title: "Thoughts on birds",
     blog_content:
       "I think that birds are not realI think that birds are not realI think that birds are not realI think that birds are not realI think that birds are not realI think that birds are not realI think that birds are not real",
+      user_id: 2
   },
   {
     title: "Thoughts on cars",
     blog_content:
-      "I think that cars and submarines are the same thingI think that cars and submarines are the same thingI think that cars and submarines are the same thingI think that cars and submarines are the same thingI think that cars and submarines are the same thingI think that cars and submarines are the same thingI think that cars and submarines are the same thing",
+      "I think that cars and submarines are the same thingI think that cars and submarines are the same thingI think that cars and submarines are the same thing",
+      user_id: 1
   },
 ];
 
 const commentData = [
   {
     comment_content: "You are insane, how could you possibly think that?",
+    user_id: 1,
+    blog_id:3
   },
   {
     comment_content:
       "That is true, my cousin found a bird and realized it was actually a fake!",
+      user_id:2,
+      blog_id:2
   },
   {
     comment_content:
       "If they are the same, then why dont you see submarines driving around?",
+      user_id:3,
+      blog_id:1
   },
 ];
 

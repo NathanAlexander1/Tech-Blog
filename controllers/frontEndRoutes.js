@@ -26,7 +26,31 @@ router.get("/blog/:id", (req, res) => {
 });
 
 router.get("/login", (req, res) => {
+  if(req.session.logged_in) {
+    return res.redirect("/profile")
+  }
     res.render("login")
+})
+
+router.get("/logout", (req, res) => {
+  if(req.session.logged_in) {
+    return res.redirect("/login")
+  }
+    res.render("login")
+})
+
+
+router.get("/profile", (req, res) => {
+    if(!req.session.logged_in) {
+      return res.redirect("/login")
+    }
+    User.findByPk(req.session.user_id, {
+      include:[Blog]
+    }).then(userData=>{
+      const hbsData = userData.toJSON();
+      // res.json(hbsData)
+      res.render("profile", hbsData)
+    })
 })
 
 module.exports = router;

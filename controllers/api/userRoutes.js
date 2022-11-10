@@ -1,5 +1,16 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Blog, Comment} = require('../../models');
+
+//get all users
+router.get('/',(req,res)=>{
+  User.findAll({
+      include:[Blog, Comment]
+  }).then(userData=>{
+      res.json(userData)
+  }).catch(err=>{
+      res.status(500).json({msg:"An error has occurred",err})
+  })
+})
 
 //create user
 router.post('/', async (req,res) => {
