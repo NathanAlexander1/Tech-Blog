@@ -1,7 +1,8 @@
 const addBlogForm = document.querySelector(".addBlog")
 
 addBlogForm.addEventListener("submit", e=>{
-    preventDefault();
+    e.preventDefault();
+    // console.log("Prevented default!")
 
     const blogObj = {
         title:document.querySelector(".blogTitle").value,

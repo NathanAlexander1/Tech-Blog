@@ -21,17 +21,7 @@ app.use(
   })
 );
 
-// const sess = {
-//   secret: process.env.SESSION_SECRET,
-//   cookie: {
-//     maxAge:1000*60*60*2
-//   },
-//   resave: false,
-//   saveUninitialized: true,
-//   store: new SequelizeStore({
-//     db: sequelize
-//   })
-// };
+
 
 app.use(express.static("public"));
 
