@@ -7,6 +7,7 @@
         <a href="/blog/{{id}}"><h3>{{title}}</h3></a>
         <p>{{blog_content}}</p>
         {{!-- {{#each Comments}} --}}
+    <button class="deletePost" data-blogId="{{id}}">Delete post</button>
         <hr>
     </div>
 {{/each}}
@@ -17,5 +18,6 @@
     <input type="text" name="blog_content" class="blog_content" placeholder="Blog Content">
     <button>Add Blog!</button>
 </form>
+
 
 <script src="/js/profile.js"></script>
